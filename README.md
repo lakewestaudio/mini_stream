@@ -47,8 +47,8 @@ port:
 
 	0   "USB1",	
 	1   "USB2",	
-  2   "USB3",	
-  3   "PWR"
+  	2   "USB3",	
+  	3   "PWR"
 	
 voltage - return voltage with 2 decimal point precision - e.g. 522 is 5.22V, 1856 is 18.56V etc..
 current - recurns current in mA - e.g. 496 is 496mA
@@ -66,9 +66,9 @@ status:
 
 	0   Everything is OK,	
 	1   Input voltage too low, audio performance could be degraded, connect 18V power supply
-  2   Unit failure, input regulator could be damaged
+  	2   Unit failure, input regulator could be damaged
 
-#### DEVDAC BOOT CONTROL
+#### Mini Streamer HW BOOT CONTROL
 
 ```shell
 [pushBoot]{boot:0}
@@ -83,13 +83,12 @@ boot:
 	0   note defined,	
 	1   puts CM3 into USB bootloader mode where new Streamer Software image can be uploaded over USB	
 	
-TODO:
-define exit from bootloader mode thru I2C-1 command from Streamer Software to DevDAC as USB CDC channel has been disconected in bootloader mode. 
+Bootloader mode has to be switched off by user holding "Power" toggle button on the unit front panel
 
 	
 #### POWER OFF CONTROL
 
-Is pushed from the DevDAC to Streamer Software to signal user has switched off the unit with hardware front panel button. Streamer Software then needs to start shutting down. After its mostly ready to cut the power, it sets turn off with cmd set to 1. DevDAC confirms with push cmd:1 and then cuts the CM3 power in 10 seconds.
+Is pushed from the Mini Streamer HW to Streamer Software to signal user has switched off the unit with hardware front panel button. Streamer Software then needs to start shutting down. After its mostly ready to cut the power, it sets turn off with cmd set to 1. DevDAC confirms with push cmd:1 and then cuts the CM3 power in 10 seconds.
 
 ```shell
 [getTurnOff]{}
@@ -108,14 +107,14 @@ cmd:
 	0 - start shutting down - either user pressed a hardware power button or is shutting it down thru the Streamer Software
 	1 - unit is ready to cut the power in 10 seconds
 
-#### DEVDAC VERSION
+#### Mini Streamer HW VERSION
 
 ```shell
 [getBoardVersion]{}
 ```
 
 ```shell
-[pushBoardVersion]{boardRev:12,firmwareXMOS0:11,firmwareXMOS1:11}
+[pushBoardVersion]{boardRev:12,firmwareRev:11}
 ```
 
 #### STREAMER VERSION
