@@ -53,6 +53,8 @@ port:
 	voltage - return voltage with 2 decimal point precision - e.g. 522 is 5.22V, 1856 is 18.56V etc..
 	current - recurns current in mA - e.g. 496 is 496mA
 	power - returns power with 2 decimal places - 259 is 2.59W
+	
+#### POWER/UNIT STATUS
 
 ```shell
 [getPowerStatus]{}
