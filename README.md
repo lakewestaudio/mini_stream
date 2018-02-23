@@ -132,3 +132,6 @@ cmd:
 ```shell
 [setStreamerVersion]{version:1223}
 ```
+#### TODO:
+
+Define UART bootloader for onboard firmware upgrade
