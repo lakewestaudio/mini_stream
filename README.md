@@ -44,6 +44,7 @@ powerShutdown:
 ```
 
 port:
+
 	0   "USB1",	
 	1   "USB2",	
   	2   "USB3",	
@@ -67,6 +68,7 @@ port:
 [replyADCcal]{y} OR [replyADCcal]{n}
 ```
 port:
+
 	0   "USB1",	
 	1   "USB2",	
   	2   "USB3",	
