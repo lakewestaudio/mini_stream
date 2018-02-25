@@ -54,10 +54,10 @@ port:
 	current - recurns current in mA - e.g. 496 is 496mA
 	power - returns power with 2 decimal places - 259 is 2.59W
 	
-#### ADC CALIBRATION - CURRENT
+#### ADC CALIBRATION
 
 ```shell
-[setADCcal]{port:1}
+[setADCcal]{port:1,type:0}
 ```
 
 ```shell
@@ -72,13 +72,43 @@ port:
 	0   "USB1",	
 	1   "USB2",	
   	2   "USB3",	
-  	3   "PWR"
+port:
+
+	0   "OFFSET",	
+	1   "RDSON",	only valid for USB2 and 3
+  	2   "VOLTAGE",	
 
 Calibration will timeout after 5s without reply
 
-#### ADC CALIBRATION - Voltage
+#### ADC CALIBRATION - recall factory cal defaults
 
-TODO
+```shell
+[getADCdefaults]{port:1}
+```
+
+```shell
+[pushADCcal]{offset:xxxx,voltage:-xxxx,rdson:80} 
+``` 
+
+RDSon is sent back only for USB 2 and 3
+
+
+#### ADC CALIBRATION - set factory cal defaults 
+#### DONT USE, ONLY FOR PRODUCTION PURPOSES!!!
+
+```shell
+[setADCdefaults]{I know what I'm doing}
+```
+
+```shell
+[pushADCdefaults]{confirmCalibrationDefaults}
+```
+
+```shell
+[replyADCdefaults]{y} OR [replyADCcal]{n}
+```
+
+RDSon is sent back only for USB 2 and 3
 
 #### POWER/UNIT STATUS
 
