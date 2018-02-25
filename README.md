@@ -57,7 +57,14 @@ port:
 #### ADC CALIBRATION
 
 ```shell
-[setADCcal]{port:1,type:0}
+[getADCcal]{port:1,type:0} - reads back calibration value with:
+```
+```shell
+[pushADCcal]{adcCal:+-xxxxxxx}
+```
+
+```shell
+[setADCcal]{port:1,type:0} - calibrates port
 ```
 
 ```shell
@@ -72,7 +79,7 @@ port:
 	0   "USB1",	
 	1   "USB2",	
   	2   "USB3",	
-port:
+type:
 
 	0   "OFFSET",	
 	1   "RDSON",	only valid for USB2 and 3
@@ -83,7 +90,11 @@ Calibration will timeout after 5s without reply
 #### ADC CALIBRATION - recall factory cal defaults
 
 ```shell
-[getADCdefaults]{port:1}
+[getADCdefaults]{port:1} - reads out factory defaults
+```
+
+```shell
+[setADCdefaults]{port:1} - sets back factory defaults for specific port
 ```
 
 ```shell
@@ -97,18 +108,18 @@ RDSon is sent back only for USB 2 and 3
 #### DONT USE, ONLY FOR PRODUCTION PURPOSES!!!
 
 ```shell
-[setADCdefaults]{I know what I'm doing}
+[setADCfactory]{I know what I'm doing}
 ```
 
 ```shell
-[pushADCdefaults]{confirmCalibrationDefaults}
+[pushADCfactory]{confirmCalibrationDefaults}
 ```
 
 ```shell
-[replyADCdefaults]{y} OR [replyADCcal]{n}
+[replyADCfactory]{y} OR [replyADCfactory]{n}
 ```
 
-RDSon is sent back only for USB 2 and 3
+Calling setADCfactory will load current calibration profile for all ports into internal memory as factory defaults.
 
 #### POWER/UNIT STATUS
 
