@@ -44,7 +44,6 @@ powerShutdown:
 ```
 
 port:
-
 	0   "USB1",	
 	1   "USB2",	
   	2   "USB3",	
@@ -54,6 +53,31 @@ port:
 	current - recurns current in mA - e.g. 496 is 496mA
 	power - returns power with 2 decimal places - 259 is 2.59W
 	
+#### ADC CALIBRATION - CURRENT
+
+```shell
+[setADCcal]{port:1}
+```
+
+```shell
+[pushADCcal]{confirmCalibrationStart}
+```
+
+```shell
+[replyADCcal]{y} OR [replyADCcal]{n}
+```
+port:
+	0   "USB1",	
+	1   "USB2",	
+  	2   "USB3",	
+  	3   "PWR"
+
+Calibration will timeout after 5s without reply
+
+#### ADC CALIBRATION - Voltage
+
+TODO
+
 #### POWER/UNIT STATUS
 
 ```shell
@@ -69,7 +93,27 @@ status:
 	0   Everything is OK,	
 	1   Input voltage too low, audio performance could be degraded, connect 18V power supply
   	2   Unit failure, input regulator could be damaged
+	
+#### POWER UP DEFAULT
 
+```shell
+[getPwrUpCond]{}
+```
+
+```shell
+[setPwrUpCond]{defaultPwrOn:1}
+```
+
+```shell
+[pushPwrUpCond]{defaultPwrOn:1}
+```
+
+defaultPwrOn:
+
+	0   Unit will power up automaticly after DC power input is applied 	
+	1   Unit has to be switched on with front panel button after power loss
+  	
+	
 #### Mini Streamer HW BOOT CONTROL
 
 ```shell
