@@ -15,7 +15,7 @@ Mini Streamer - LakeWest hardware - connected onto CM3 UART port
 ```
 
 ```shell
-[pushUSB]{activeRoute:2,powerShutdown:0}
+[setUSB]{activeRoute:2,powerShutdown:0}
 ```
 
 ```shell
