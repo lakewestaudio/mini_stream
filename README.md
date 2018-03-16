@@ -167,7 +167,9 @@ Bootloader mode has to be switched off by user presing "USB" toggle button on th
 	
 #### POWER OFF CONTROL
 
-Is pushed from the Mini Streamer HW to Streamer Software to signal user has switched off the unit with hardware front panel button. Streamer Software then needs to start shutting down. After its mostly ready to cut the power, it sets turn off with cmd set to 1. DevDAC confirms with push cmd:1 and then cuts the CM3 power in 10 seconds.
+Is pushed from the Mini Streamer HW to Streamer Software to signal that user has switched off the unit with hardware front panel toggle. Streamer Software then needs to start shutting down. After its ready to cut the power off, it sets GPIO34 low and power is going to be cut 3 seconds later.
+
+If GPIO34 is not put low within 60 seconds, the unit will be shut anyway. If GPIO34 is low when shutdown is commanded (shall go high when Streamer Software has booted up), unit is shut down immediately. 
 
 ```shell
 [getTurnOff]{}
@@ -177,14 +179,13 @@ Is pushed from the Mini Streamer HW to Streamer Software to signal user has swit
 [setTurnOff]{cmd:0}
 ```
 
-
 ```shell
 [pushTurnOff]{cmd:0}
 ```
 cmd:
 
-	0 - start shutting down - either user pressed a hardware power button or is shutting it down thru the Streamer Software
-	1 - unit is ready to cut the power in 10 seconds
+	0 - not valid
+	1 - unit is shutting down (either set from Streamer Software, or pushed from the Mini Streamer HW)
 
 #### Mini Streamer HW VERSION
 
