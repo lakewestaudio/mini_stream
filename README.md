@@ -13,7 +13,7 @@ UART is running at 115200kbps, no parity, 1 stop bit. Using pins GPIO32 (TX to M
 WHITE network LED is connected on pin GPIO37, RED network LED is connected on pin GPIO38. 
 Pin GPIO39 is MCU reset and must be set as input, unless UART bootloader cant be accesed and needs to be forced with pin GPIO35. GPIO34 shall be HIGH when CM3 finished booting and should go LOW when its safe to cut off CM3 power supply.
 
-GPIO43 is lan reset, most rpi firmwares take care of that (just needs to be defined in dtblob). 
+GPIO43 is LAN chip reset, most rpi firmwares take care of that (just needs to be defined in dtblob). 
 GPIO40 when low shuts down the WiFi radio (by default must be forced high). 
 GPIO41 is a wake pin from the WiFi module (its purpose is not really known RN).
             
