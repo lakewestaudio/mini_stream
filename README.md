@@ -145,25 +145,6 @@ status:
 	0   Everything is OK,	
 	1   Input voltage too low, audio performance could be degraded, connect 18V power supply
   	2   Unit failure, input regulator could be damaged
-	
-#### POWER UP DEFAULT
-
-```shell
-[getPwrUpCond]{}
-```
-
-```shell
-[setPwrUpCond]{defaultPwrOn:1}
-```
-
-```shell
-[pushPwrUpCond]{defaultPwrOn:1}
-```
-
-defaultPwrOn:
-
-	0   Unit will power up automaticly after DC power input is applied 	
-	1   Unit has to be switched on with front panel button after power loss
   	
 	
 #### Mini Streamer HW BOOT CONTROL
@@ -181,7 +162,7 @@ boot:
 	0   note defined,	
 	1   puts CM3 into USB bootloader mode where new Streamer Software image can be uploaded over USB	
 	
-Bootloader mode has to be switched off by user holding "Power" toggle button on the unit front panel
+Bootloader mode has to be switched off by user presing "USB" toggle button on the unit front panel
 
 	
 #### POWER OFF CONTROL
