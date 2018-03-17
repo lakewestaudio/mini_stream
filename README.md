@@ -114,7 +114,7 @@ RDSon is sent back only for USB 2 and 3
 
 
 #### ADC CALIBRATION - set factory cal defaults 
-##### DONT USE, ONLY FOR PRODUCTION PURPOSES!!!
+##### DONT USE, FOR PRODUCTION PURPOSES ONLY!!!
 
 ```shell
 [setADCfactory]{I know what I'm doing}
