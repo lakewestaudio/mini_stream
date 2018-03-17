@@ -92,9 +92,9 @@ type:
 
 	0   "OFFSET",	
 	1   "RDSON",	only valid for USB2 and 3
-  	2   "VOLTAGE",	
 
 Calibration will timeout after 5s without reply
+PWR is self calibrated
 
 #### ADC CALIBRATION - recall factory cal defaults
 
