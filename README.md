@@ -54,9 +54,9 @@ powerShutdown:
 
 port:
 
-	0   "USB1",	
-	1   "USB2",	
-  	2   "USB3",	
+	0   "USB1" (back DAC),	
+	1   "USB2" (back universal),	
+  	2   "USB3" (front universal),	
   	3   "PWR"
 	
 	voltage - return voltage with 2 decimal point precision - e.g. 522 is 5.22V, 1856 is 18.56V etc..
