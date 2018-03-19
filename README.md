@@ -107,7 +107,7 @@ PWR is self calibrated
 ```
 
 ```shell
-[pushADCcal]{offset:xxxx,voltage:-xxxx,rdson:80} 
+[pushADCdefaults]{offset:xxxx,rdson:80} 
 ``` 
 
 RDSon is sent back only for USB 2 and 3
