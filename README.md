@@ -24,11 +24,11 @@ GPIO41 is a wake pin from the WiFi module (its purpose is not really known RN).
 ```
 
 ```shell
-[setUSB]{activeRoute:2,powerShutdown:0}
+[setUSB]{activeRoute:1,powerShutdown:0}
 ```
 
 ```shell
-[pushUSB]{activeRoute:2,powerShutdown:0}
+[pushUSB]{activeRoute:1,powerShutdown:0}
 ```
 activeRoute:
 
