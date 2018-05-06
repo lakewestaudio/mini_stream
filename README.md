@@ -164,6 +164,21 @@ boot:
 	
 Bootloader mode has to be switched off by user presing "USB" toggle button on the unit front panel
 
+#### WATCHDOG
+
+```shell
+[getWatchdog]{}
+```
+
+```shell
+[setWatchdog]{active:0}
+```
+
+```shell
+[pushWatchdog]{active:0}
+```
+
+5 second watchdog, expects pulse on GPIO34 every second, about 100ms pulse is ok. By default disabled, shall be enabled when software gets to the stage where it can reliably generate pulses. Can be disabled for task like memory update etc. 
 	
 #### POWER OFF CONTROL
 
