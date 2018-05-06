@@ -171,15 +171,21 @@ Bootloader mode has to be switched off by user presing "USB" toggle button on th
 ```
 
 ```shell
-[setWatchdog]{active:0}
+[setWatchdog]{timeout:0}
 ```
 
 ```shell
-[pushWatchdog]{active:0}
+[pushWatchdog]{timeout:0}
 ```
 
-5 second watchdog, expects pulse on GPIO34 every second, about 100ms pulse is ok. By default disabled, shall be enabled when software gets to the stage where it can reliably generate pulses. Can be disabled for task like memory update etc. 
+Watchdog, expects pulse on GPIO34 to reset its timer, about 1ms pulse is ok. By default disabled, shall be enabled when software gets to the stage where it can reliably generate pulses. Can be disabled for task like memory update etc. 
+
+timeout:
+	watchdig timeout in seconds, maximum 30s, if exceeded, 30s is set and timer activated
 	
+	0 - disables timer
+	1 to 30 - time in seconds
+
 #### POWER OFF CONTROL
 
 Is pushed from the Mini Streamer HW to Streamer Software to signal that user has switched off the unit with hardware front panel toggle. Streamer Software then needs to start shutting down. After its ready to cut the power off, it sets GPIO34 low and power is going to be cut 3 seconds later.
