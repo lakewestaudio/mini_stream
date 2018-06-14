@@ -49,7 +49,7 @@ powerShutdown:
 ```
 
 ```shell
-[pushADC]{voltage:522,current:496,power:259}
+[pushADC]{port:1,voltage:522,current:496,power:259}
 ```
 
 port:
