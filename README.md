@@ -210,7 +210,34 @@ cmd:
 	
 #### HDMI REQUEST
 
+```shell
+[getHDMIstate]{}
+```
+
+```shell
+[setHDMIstatus]{enabled:0}
+```
+
+```shell
+[pushHDMIstatus]{enabled:0}
+```
+
+Disables or enables HDMI output.
+
 #### SOC TEMP
+
+```shell
+[getSoCtemp]{}
+```
+
+```shell
+[setSoCtemp]{temp:65}
+```
+
+```shell
+[pushSoCtemp]{temp:65}
+```
+SoC Temperature, host should reply by set cmd on get cmd from MCU.
 
 #### Mini Streamer HW VERSION
 
