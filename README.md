@@ -208,6 +208,25 @@ cmd:
 	0 - not valid
 	1 - unit is shutting down (either set from Streamer Software, or pushed from the Mini Streamer HW)
 	
+#### POWER ON STATE
+
+```shell
+[getPowerOnstate]{}
+```
+
+```shell
+[setPowerOnstate]{state:0}
+```
+
+```shell
+[pushPowerOnstate]{state:0}
+```
+state:
+
+	0 - normal operation
+	1 - remembers the last power state (and will act accordingly after power loss)
+
+	
 #### HDMI REQUEST
 
 ```shell
