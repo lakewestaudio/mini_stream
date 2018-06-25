@@ -207,6 +207,10 @@ cmd:
 
 	0 - not valid
 	1 - unit is shutting down (either set from Streamer Software, or pushed from the Mini Streamer HW)
+	
+#### HDMI REQUEST
+
+#### SOC TEMP
 
 #### Mini Streamer HW VERSION
 
