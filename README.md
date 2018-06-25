@@ -223,8 +223,9 @@ cmd:
 ```
 state:
 
-	0 - normal operation
+	0 - normal operation, unit will be OFF after powe loss
 	1 - remembers the last power state (and will act accordingly after power loss)
+	2 - unit will always switch on after power loss recovery (embedded units in walls and so on)
 
 	
 #### HDMI REQUEST
