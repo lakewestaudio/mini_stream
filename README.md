@@ -117,7 +117,7 @@ RDSon is sent back only for USB 2 and 3
 ##### DONT USE, FOR PRODUCTION PURPOSES ONLY!!!
 
 ```shell
-[setADCfactory]{I know what I'm doing}
+[setADCfactory]{*non public password*}
 ```
 
 ```shell
@@ -266,9 +266,14 @@ SoC Temperature, host should reply by set cmd on get cmd from MCU.
 ```
 
 ```shell
-[pushBoardVersion]{boardRev:12,firmwareRev:11}
+[pushBoardVersion]{boardRev:12,firmwareRev:11,boardType:0}
 ```
-
+boardType:
+	
+	0 - lakewest mini
+	1 - project S2
+	2 - Stack audio
+	
 #### STREAMER VERSION
 
 ```shell
